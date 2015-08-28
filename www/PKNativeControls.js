@@ -810,6 +810,16 @@
     };
 
     /**
+     * Return a new BarFlexSpaceButton
+     * @returns {NativeControl}
+     * @constructor
+     */
+    self.BarFlexSpaceButton = function ( )
+    {
+      return self.createNewControl ( "BarFlexSpaceButton" );
+    };
+
+    /**
      * Return a new Tab Bar
      * @returns {NativeControl}
      * @constructor

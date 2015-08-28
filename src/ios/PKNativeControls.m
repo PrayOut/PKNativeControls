@@ -298,6 +298,18 @@ typedef CDVPluginResult* (^nativeControlHandler)(NSString*, NSString*, id, UIVie
               return [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
             }
         },
+        @"BarFlexSpaceButton":
+        @{
+            @"create": NATIVE_CONTROL_HANDLER
+            {
+              UIBarButtonItem* barb = ({
+                UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+                barButton;
+              });
+              [self _addNativeControl:barb withID:ID];
+              return [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+            }
+        },
         @"ToolBar":
         @{
             @"create": NATIVE_CONTROL_HANDLER
